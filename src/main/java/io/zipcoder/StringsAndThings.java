@@ -1,6 +1,9 @@
 package io.zipcoder;
 
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 /**
  * @author tariq
  */
@@ -14,9 +17,11 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
-    public Integer countYZ(String input){
-        return null;
-    }
+    public Integer countYZ(String input){return null;
+        }
+
+
+
 
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
@@ -28,6 +33,8 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
+        String newString = "";
+        String.
         return null;
     }
 
@@ -40,7 +47,7 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+        return Pattern.matches(")
     }
 
     /**
