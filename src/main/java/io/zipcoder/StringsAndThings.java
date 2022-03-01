@@ -17,7 +17,12 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
-    public Integer countYZ(String input){return null;
+    public Integer countYZ(String input){
+        Matcher string = Pattern.compile("[yz]\\b").matcher(input);
+        int count = 0;
+        while (string.find())
+            count++;
+        return count;
         }
 
 
@@ -33,9 +38,9 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
-        String newString = "";
-        String.
-        return null;
+
+
+        return base.replaceAll( remove, "");
     }
 
     /**
@@ -46,8 +51,24 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("This is notnot") // Should return true
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
-    public Boolean containsEqualNumberOfIsAndNot(String input){
-        return Pattern.matches(")
+    public Boolean containsEqualNumberOfIsAndNot(String input) {
+        Matcher string = Pattern.compile("not").matcher(input);
+        Matcher comp = Pattern.compile("is").matcher(input);
+        int count1 = 0;
+        int count2 = 0;
+        while (string.find()) {
+            count1++;
+        }
+        while (comp.find()) {
+            count2++;
+
+        }
+        if (count1 == count2) {
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -58,7 +79,12 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+        Matcher string = Pattern.compile("gg").matcher(input);
+        if (string.find()){
+            return true;
+        }
+
+        return false;
     }
 
 
@@ -70,6 +96,12 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
-        return null;
+        Matcher string = Pattern.compile("[a-z][A-Z]\1+").matcher(input);
+        int count = 0;
+        while(string.find()){
+            count++;
+        }
+
+        return count;
     }
 }
