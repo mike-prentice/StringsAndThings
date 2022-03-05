@@ -96,10 +96,12 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
-        Matcher string = Pattern.compile("[a-z][A-Z]\1+").matcher(input);
         int count = 0;
-        while(string.find()){
-            count++;
+        for (int i = 0; i < input.length()-2; i ++) {
+            if (input.charAt(i) == input.charAt(i + 1) && input.charAt(i + 1) == input.charAt(i + 2) ){
+                count ++;
+            }
+
         }
 
         return count;
